@@ -5,7 +5,7 @@ import (
   "encoding/json"
   "net/http"
 
-  "github.com/drone/drone-plugin-go"
+  "github.com/drone/drone-plugin-go/plugin"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
     Urls []string `json:"urls"`
   }{}
 
-  plugin.Param("repo": &repo)
+  plugin.Param("repo", &repo)
   plugin.Param("build", &build)
   plugin.Param("vargs", &vargs)
   plugin.Parse()
